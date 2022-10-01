@@ -42,8 +42,8 @@ const sagaMiddleware = createSagaMiddleware();
 
 // Create the rootSaga generator function
 function* rootSaga() {
-    yield takeEvery('FETCH_MOVIES', fetchAllMovies);
-    // yield takeEvery('SAGA_FETCH_MOVIES_DETAILS', fetchMoviesDetails);
+    yield takeEvery('FETCH_MOVIES', fetchAllMovies)
+    yield takeEvery('SAGA_FETCH_MOVIES_DETAILS', fetchMoviesDetails)
 }
 
 // REDUCERS
@@ -58,10 +58,12 @@ const movies = (state = [], action) => {
 }
 
 // Used to store the movie genres
-const genres = (state = [], action) => {
+const genres = (state = {}, action) => {
     switch (action.type) {
         case 'SET_GENRES':
             return action.payload;
+        case 'CLEAR_MOVIES_DETAILS':
+            return {}
         default:
             return state;
     }

@@ -9,10 +9,11 @@ function DetailsPage () {
     const dispatch = useDispatch();
     const movieID = params.id
     const movieDetails = useSelector(store => store.genres)
-
+    console.log(movieDetails);
 
     useEffect(() => {
 
+        // THIS WILL SEND THE DATA (MOVIE-ID) TO SAGA ON INDEX.JS
         dispatch({
             type: 'SAGA_FETCH_MOVIES_DETAILS',
             payload: movieID
@@ -23,7 +24,13 @@ function DetailsPage () {
                 type: 'CLEAR_MOVIES_DETAILS'
             })
         }
-    }, [movieID])
+    }, [params.id])
+
+    const maping = (genreArray) => {
+        for (let genres of genreArray) {
+            return genres;
+        }
+    }
     
     return (
         <div>
@@ -32,7 +39,10 @@ function DetailsPage () {
                 <button>Back to List</button>
             </Link>
             <h2>Movies Details goes here!!!</h2>
-            <p>{movieDetails}</p>
+            <img src={movieDetails.poster}></img>
+            <p>{movieDetails.title}</p>
+            <p>Movie Description: {movieDetails.description}</p>
+            <p>Movie Genres: {movieDetails.array_agg}</p>
         </div>
     )
 } // END OF DetailsPage. 
