@@ -3,28 +3,30 @@ const router = express.Router();
 const pool = require('../modules/pool')
 
 router.get('/:id', (req, res) => {
-  console.log('GET /api/genre/:id')
     const sqlText = `
     SELECT 
-      movies.title,
-      movies.poster,
-      movies.description,
-      genres.name
-    FROM movies
-    JOIN movies_genres
-    ON movies.id = movies_genres.movie_id
-    JOIN genres
-    ON genres.id = movies_genres.genre_id;
-    `
-  res.sendStatus(500)
+      "movies"."id",
+      "title",
+      "poster",
+      "description",
+      ARRAY_AGG("name")
+    FROM "movies"
+    JOIN "movies_genres"
+    ON "movies"."id" = "movies_genres"."movie_id"
+    JOIN "genres"
+    ON "genres"."id" = "movies_genres"."genre_id"
+    WHERE  "movies"."id" = $1
+    GROUP BY "movies"."id"
+    ORDER BY "movies"."id";
+  `
 
   const sqlValues = [req.params.id]
   pool.query(sqlText, sqlValues)
   .then( getRes => {
-    res.send(getRes[0])
+    res.send(getRes.rows[0])
   })
   .catch( getErr => {
-    console.log('Error on GET ROUTE Genre.Router:', getErr)
+    console.log('Error on GET ROUTE SERVER Genre.Router:', getErr)
     res.sendStatus(500)
   })
 });
