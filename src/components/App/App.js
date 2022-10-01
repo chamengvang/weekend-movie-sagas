@@ -11,7 +11,7 @@ function App() {
         <Route path="/" exact>
           <MovieList />
         </Route>
-        <Route exact path="/detailsPage">
+        <Route exact path="/detailsPage/:id">
           <DetailsPage />
         </Route>
 
