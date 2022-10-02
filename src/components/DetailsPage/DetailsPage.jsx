@@ -2,6 +2,14 @@ import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
+import './DetailsPage.css'
+
+// MUI IMPORT
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import { Button, CardActionArea, CardActions } from '@mui/material';
 
 function DetailsPage () {
 
@@ -33,16 +41,32 @@ function DetailsPage () {
     }
     
     return (
-        <div>
-            <h1>This is the details page!!!</h1>
-            <Link to='/'>
-                <button>Back to List</button>
-            </Link>
-            <h2>Movies Details goes here!!!</h2>
-            <img src={movieDetails.poster}></img>
-            <p>{movieDetails.title}</p>
-            <p>Movie Description: {movieDetails.description}</p>
-            <p>Movie Genres: {movieDetails.array_agg}</p>
+        <div className='detailDiv'>
+            <Card sx={{ maxWidth: 800 }}>
+                <CardActionArea>
+                    <CardMedia
+                    component="img"
+                    height="140"
+                    src={movieDetails.poster} 
+                    alt={movieDetails.title}
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" component="div">
+                            {movieDetails.title}
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                            {movieDetails.description}
+                        </Typography>
+                    </CardContent>
+                </CardActionArea>
+                <CardActions>
+                    <Button size="small" color="primary">
+                        <Link to='/'>
+                            <button>Back to List</button>
+                        </Link>
+                    </Button>
+                </CardActions>
+            </Card>
         </div>
     )
 } // END OF DetailsPage. 
