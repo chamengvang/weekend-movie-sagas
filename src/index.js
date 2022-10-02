@@ -37,6 +37,16 @@ function* fetchMoviesDetails (action) {
     })
 } // END OF fetchMoviesDetails
 
+function* AddNewMovie (action) {
+    const newMovie = action.payload
+    const AddingMovie = yield axios({
+        method: 'POST',
+        url: '/api/movie',
+        data: newMovie
+    })
+} // END OF AddNewMovie
+
+
 // Create sagaMiddleware
 const sagaMiddleware = createSagaMiddleware();
 
@@ -44,6 +54,7 @@ const sagaMiddleware = createSagaMiddleware();
 function* rootSaga() {
     yield takeEvery('FETCH_MOVIES', fetchAllMovies)
     yield takeEvery('SAGA_FETCH_MOVIES_DETAILS', fetchMoviesDetails)
+    yield takeEvery('SAGA_ADD_MOVIE', AddNewMovie)
 }
 
 // REDUCERS

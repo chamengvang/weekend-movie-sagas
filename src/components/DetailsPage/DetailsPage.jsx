@@ -60,11 +60,12 @@ function DetailsPage () {
                     </CardContent>
                 </CardActionArea>
                 <CardActions>
-                    <Button size="small" color="primary">
                         <Link to='/'>
-                            <button>Back to List</button>
+                            <Button variant="contained" size="small" color="primary">
+                                Back to List
+                            </Button>
                         </Link>
-                    </Button>
+                    
                 </CardActions>
             </Card>
         </div>
