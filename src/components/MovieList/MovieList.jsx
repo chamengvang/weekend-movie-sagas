@@ -23,8 +23,7 @@ function MovieList() {
                 })}
             </section>
         </main>
-
     );
-}
+} // END OF MovieList
 
 export default MovieList;
