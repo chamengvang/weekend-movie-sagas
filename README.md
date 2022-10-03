@@ -9,11 +9,10 @@ For this week project, no API were used. There are two parts for this weekend ch
 My first initial process to complete this weekend challenge is to start on part 1 of the challenge which is the movie sagas SQL practice. The tables and data are the same as part 2 of the weekend challenge and will be used to help reference it. First to understand the tables and data, I drew a map on how each table are related and how I can join them together to get a specific information out of each table. Once I was done with part 1, I moved on to part 2 of the weekend challenge and start on setting up folders/files and linking up routers. Next, I start on the details page and how to make a GET request for a specific movie using req.params and :id. Once all route was working as intended, I render the movie information using some basic material UI and styling. I also added in a add movie functionality page to add new movies to the list. 
 
 Here is screenshot of the final product that I have style with some basic material UI styling. 
-
-<img width="1440" alt="Screen Shot 2022-10-02 at 8 28 55 PM" src="https://user-images.githubusercontent.com/105823509/193486743-12cb0213-76f5-47d0-9ba0-9a472ead4286.png">
-![Screen Shot 2022-10-02 at 7 05 30 PM](https://user-images.githubusercontent.com/105823509/193486942-50f23d47-5c5c-443f-a777-1244adb1ac51.png)
-[Screen Shot 2022-10-02 at 1 59 32 PM](https://user-images.githubusercontent.com/105823509/193487004-2e4ce626-981b-41eb-af5a-cb3be9995fba.png)
-![Screen Shot 2022-10-02 at 7 40 46 PM](https://user-images.githubusercontent.com/105823509/193487031-6e7e8c73-566f-4e53-b5f6-d6aeeeb5cac8.png)
+<img width="1440" alt="Screen Shot 2022-10-02 at 8 28 55 PM" src="https://user-images.githubusercontent.com/105823509/193487198-0918a14f-45d6-4fd7-9057-b94b8feb6023.png">
+![Screen Shot 2022-10-02 at 7 05 30 PM](https://user-images.githubusercontent.com/105823509/193487219-228c4d7d-442d-4d62-8f80-41a5deb5080e.png)
+![Screen Shot 2022-10-02 at 1 59 32 PM](https://user-images.githubusercontent.com/105823509/193487267-3d536c84-5bba-49d7-83c4-852a5ecdf411.png)
+![Screen Shot 2022-10-02 at 7 40 46 PM](https://user-images.githubusercontent.com/105823509/193487289-ce88bed3-9846-4a26-8294-3c4fbda58bcc.png)
 
 ## Prerequisites:
 
