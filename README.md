@@ -10,7 +10,10 @@ My first initial process to complete this weekend challenge is to start on part 
 
 Here is screenshot of the final product that I have style with some basic material UI styling. 
 
-
+<img width="1440" alt="Screen Shot 2022-10-02 at 8 28 55 PM" src="https://user-images.githubusercontent.com/105823509/193486743-12cb0213-76f5-47d0-9ba0-9a472ead4286.png">
+<img width="1440" alt="Screen Shot 2022-10-02 at 8 28 55 PM" src="https://user-images.githubusercontent.com/105823509/193486759-07490d1a-0adf-4ac8-bbaa-491c6c13332f.png">
+<img width="1440" alt="Screen Shot 2022-10-02 at 8 28 55 PM" src="https://user-images.githubusercontent.com/105823509/193486783-48dbaae2-d7df-4e19-b4a8-536a28ace0cc.png">
+<img width="1440" alt="Screen Shot 2022-10-02 at 8 28 55 PM" src="https://user-images.githubusercontent.com/105823509/193486793-9942a925-a0ab-486f-8000-465c0e406dab.png">
 
 ## Prerequisites:
 
