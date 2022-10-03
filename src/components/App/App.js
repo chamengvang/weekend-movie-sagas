@@ -8,8 +8,8 @@ import AddMoviePage from '../AddMoviePage/AddMoviePage.jsx';
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Router>        
+      <Router>
+      <Header />     
         <Route exact path="/">
           <MovieList />
         </Route>

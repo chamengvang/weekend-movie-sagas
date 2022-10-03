@@ -9,7 +9,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { Button, CardActionArea, CardActions } from '@mui/material';
+import { Button, CardActionArea, CardActions, ListItem } from '@mui/material';
 
 function DetailsPage () {
 
@@ -33,12 +33,6 @@ function DetailsPage () {
             })
         }
     }, [params.id])
-
-    const maping = (genreArray) => {
-        for (let genres of genreArray) {
-            return genres;
-        }
-    }
     
     return (
         <div className='detailDiv'>
@@ -54,8 +48,11 @@ function DetailsPage () {
                         <Typography gutterBottom variant="h5" component="div">
                             {movieDetails.title}
                         </Typography>
-                        <Typography variant="body2" color="text.secondary">
+                        <Typography variant="body2">
                             {movieDetails.description}
+                        </Typography>
+                        <Typography variant="h5">
+                            Genres: {movieDetails.array_agg}
                         </Typography>
                     </CardContent>
                 </CardActionArea>

@@ -1,6 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
+import './AddMoviePage.css';
 
 // MUI IMPORT
 import Box from '@mui/material/Box';
@@ -11,6 +13,12 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import FormHelperText from '@mui/material/FormHelperText';
+
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import { CardActionArea } from '@mui/material';
 
 function AddMoviePage () {
 
@@ -36,6 +44,13 @@ function AddMoviePage () {
             type: 'SAGA_ADD_MOVIE',
             payload: movieInfo
         })
+        sendBackToHomePage();
+    }
+
+    // THIS WILL SEND USE BACK TO THE HOME PAGE AFTER SUBMIT
+    const history = useHistory();
+    const sendBackToHomePage = () => {
+        history.push('/');
     }
 
     return (
@@ -77,8 +92,27 @@ function AddMoviePage () {
                     </Select>
                     <FormHelperText>Required</FormHelperText>
                 </FormControl>
-            <Button onClick={addNewMovie} variant="outlined">Add Movie</Button>
+                <Button onClick={addNewMovie} variant="outlined">Add Movie</Button>
             </Box>
+            <p>Preview</p>
+            <Card sx={{ maxWidth: 1000 }}>
+                <CardActionArea>
+                    <CardMedia
+                    component="img"
+                    height="140"
+                    image={URL}
+                    alt="image URL"
+                    />
+                    <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                        {title}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                       {description}
+                    </Typography>
+                    </CardContent>
+                </CardActionArea>
+            </Card>
         </div>
     )
 }
