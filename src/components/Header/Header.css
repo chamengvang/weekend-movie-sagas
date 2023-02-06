@@ -1,4 +1,7 @@
 .headerDiv {
-    background: lightskyblue;
+    background-image: url(../../../public/images/Curtains.gif);
+    background-repeat: no-repeat;
+    background-size: 2000px;
+    background-position: center;
     padding: 100px;
 }

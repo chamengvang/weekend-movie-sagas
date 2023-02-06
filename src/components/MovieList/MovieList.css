@@ -1,8 +1,14 @@
 .movies {
     display : flex;
     flex-wrap: wrap;
+    padding: 30px;
 }
 
-.css-o69gx8-MuiCardMedia-root {
-    height: 1000px;
+.movieItems {
+    padding: 30px;
+    height: fit-content;
+}
+
+.img {
+    height: fit-content;
 }
