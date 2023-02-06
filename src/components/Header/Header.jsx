@@ -6,16 +6,12 @@ function Header () {
     return (
         <div className='headerDiv'>
             <h1>The Movies Saga!</h1>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <Link to='/'>
+            {/* <Link to='/'>
                 <Button variant="contained">Home Page</Button>
             </Link>
             <Link to='/addMovie'>
                 <Button variant="contained">Add Movie</Button>
-            </Link>
+            </Link> */}
         </div>
     )
 }

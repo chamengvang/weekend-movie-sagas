@@ -18,17 +18,17 @@ function MovieItem ({movieItem}) {
     }
 
     return (
-        <div className='movieItem'>
-            <Card sx={{ maxWidth: 600 }}>
+        <div className='movieItems'>
+            <Card className='movieItem' sx={{ maxWidth: 300 , minWidth:300 }}>
                 <CardActionArea onClick={handleDetailsClick} >
                     <CardMedia
+                        className='images1'
                         component="img"
-                        height="auto"
                         src={movieItem.poster} 
                         alt={movieItem.title}
                         />
                     <CardContent>
-                        <Typography gutterBottom variant="h5" component="div">
+                        <Typography variant="subtitle1">
                             <h3>{movieItem.title}</h3>
                         </Typography>
                     </CardContent>
